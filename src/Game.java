@@ -16,6 +16,10 @@ public class Game {
 		
 		
 		// JO JO test
+		
+		int zahl = 10;
+		zahl = zahl + 20;
+		
 	}
 
 }
