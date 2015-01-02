@@ -17,9 +17,10 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Random rand = new Random ();
-		Enemy enemy = new Enemy (rand.nextInt(Enemy.enemiesClass.length));
-		Enemy enemy1 = new Enemy (0);
+	
+		
+		Enemy ausgabe = new Enemy ();
+		ausgabe.enemyInformations ();
 	}
 
 }

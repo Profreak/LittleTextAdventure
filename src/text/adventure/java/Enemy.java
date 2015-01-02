@@ -1,32 +1,43 @@
 package text.adventure.java;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Enemy {
 
-	public static final String [] enemiesClass = {"Warrior", "Zombie","Dark Mage","Hellhound", "Hello Kitty","Old Granpa" };
+	public static final String[] ENEMIES = { "Mage", "Skeleton", "Demon", "Hellhound", "Barbarian", "Knight", "Zombie" };
+	public final static int MIN_ENEMY_ATTACK = 5;
+	public final static int MAX_ENEMY_ATTACK = 25;
+	public final static int MAX_ENEMY_DEFENCE = 5;
+	public final static int MAX_ENEMY_HEALTH = 60;
+	public final static int MIN_ENEMY_HEALTH = 10;
+	private int enemyHealth;
+	private int enemyAttack;
+	private int enemyDefence;
 
+	public void Enemy() {
+
+		Scanner sc = new Scanner(System.in);
+		Random rand = new Random();
+
+		String enemy = ENEMIES[rand.nextInt(ENEMIES.length)];
+
+		System.out.println(enemy);
+
+		enemyHealth = MIN_ENEMY_HEALTH + rand.nextInt(MAX_ENEMY_HEALTH - MIN_ENEMY_HEALTH);
+		enemyAttack = MIN_ENEMY_ATTACK + rand.nextInt(MAX_ENEMY_ATTACK - MIN_ENEMY_ATTACK);
+		enemyDefence = rand.nextInt(MAX_ENEMY_DEFENCE);
+
+	}
 	
-	int health;
-	int attack;
-	int defence;
-	int dropRate;
-	String klasse;
-	
-// für jede Klasse wird nun ein Wert eingegeben,
-	
-	
-	
-	// Methode, welche aufgerufen wird, wenn ich den new Befehl ausführen => ist der Konstruktur => der Typ der das baut.
-	// Vorher existiert nur der Bauplan, wie bei einer Miniatur. Erst durch die Ausführung new Enemy wird diese Miniatur gegossen.
-	
-	public Enemy (int enemyId) {
+	/**
+	 * Returns true if enemy is alive
+	 * 
+	 * @return true if enemy is alive
+	 */
+	public boolean isAlive(){
 		
-		klasse = enemiesClass [enemyId];
-System.out.println (klasse);
+		return (enemyHealth > 0);
 	}
 
-	
-	
-	
 }
-
-
