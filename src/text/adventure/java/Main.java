@@ -17,10 +17,11 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-	
+	GameLogic game = new GameLogic ();
+	game.GameLogic ();
 		
-		Enemy ausgabe = new Enemy ();
-		ausgabe.enemyInformations ();
+		
+		
 	}
 
 }

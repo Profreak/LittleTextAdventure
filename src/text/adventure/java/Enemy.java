@@ -22,7 +22,7 @@ public class Enemy {
 
 		String enemy = ENEMIES[rand.nextInt(ENEMIES.length)];
 
-		System.out.println(enemy);
+		
 
 		enemyHealth = MIN_ENEMY_HEALTH + rand.nextInt(MAX_ENEMY_HEALTH - MIN_ENEMY_HEALTH);
 		enemyAttack = MIN_ENEMY_ATTACK + rand.nextInt(MAX_ENEMY_ATTACK - MIN_ENEMY_ATTACK);
