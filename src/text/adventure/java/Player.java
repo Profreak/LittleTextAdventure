@@ -17,8 +17,7 @@ public class Player {
 		Random rand = new Random ();
 		int attack = rand.nextInt(this.playerAttack);
 		int defence = rand.nextInt (this.playeDefence);
-		
-		
+	
 	}
 
 }

@@ -24,10 +24,12 @@ public class Enemy {
 
 		
 
-		enemyHealth = MIN_ENEMY_HEALTH + rand.nextInt(MAX_ENEMY_HEALTH - MIN_ENEMY_HEALTH);
-		enemyAttack = MIN_ENEMY_ATTACK + rand.nextInt(MAX_ENEMY_ATTACK - MIN_ENEMY_ATTACK);
-		enemyDefence = rand.nextInt(MAX_ENEMY_DEFENCE);
+		  enemyHealth = MIN_ENEMY_HEALTH + rand.nextInt(MAX_ENEMY_HEALTH - MIN_ENEMY_HEALTH);
+		  enemyAttack = MIN_ENEMY_ATTACK + rand.nextInt(MAX_ENEMY_ATTACK - MIN_ENEMY_ATTACK);
+		  enemyDefence = rand.nextInt(MAX_ENEMY_DEFENCE);
 
+		 
+		  
 	}
 	
 	/**
