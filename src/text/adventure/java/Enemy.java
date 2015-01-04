@@ -16,7 +16,7 @@ public class Enemy {
 	private int enemyAttack;
 	private int enemyDefence;
 
-	public void Enemy() {
+	public Enemy() {
 
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
@@ -30,6 +30,13 @@ public class Enemy {
 		enemyDefence = rand.nextInt(MAX_ENEMY_DEFENCE);
 
 	}
+	
+	// funktioniert das nicht bei Strings?
+	
+	public String getEnemy () {
+		return enemy;
+	}
+
 
 	/**
 	 * @return the enemyHealth
@@ -86,4 +93,11 @@ public class Enemy {
 		return (enemyHealth > 0);
 	}
 
-}
+
+
+
+	
+		
+	}
+
+
