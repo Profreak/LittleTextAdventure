@@ -48,10 +48,10 @@ public class GameLogic {
 			while (enemy.isAlive()) {
 			if (action.equals("1")) {
 				System.out.println ("You swing your mighty sword! ");
-				int damageDone = enemy.enemyHealth - player.playerAttack;
-				int damageTaken = player.playerHealth - enemy.enemyAttack;
+				int damageDone = enemy.getEnemyHealth() - player.playerAttack;
+				int damageTaken = player.playerHealth - enemy.getEnemyHealth();
 				System.out.println ("You deal " + player.playerAttack + " damage");
-				System.out.println (" You take " + enemy.enemyAttack);
+				System.out.println (" You take " + enemy.getEnemyHealth());
 				
 				/**
 				 * Hi Ludi,
