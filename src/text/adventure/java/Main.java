@@ -21,6 +21,7 @@ public class Main {
 
 	GameLogic game = new GameLogic ();
 	game.GameLogic ();
+
 		
 		
 		

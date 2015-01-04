@@ -16,11 +16,11 @@ public class GameLogic {
 		 
 	enemy.getClass();
 	
-	Scanner sc = new Scanner(System.in);
-	String action = sc.next();
-	
 	System.out.println ("Welcom to the Dungeon!");
 	
+	Scanner sc = new Scanner(System.in);
+	String action = sc.next();
+
 	
 	boolean running = true;
 	while (running) {
@@ -62,7 +62,7 @@ public class GameLogic {
 		}
 		else if (action.equals("2")) {
 			System.out.println ("You are searching this area for something");
-			if  ()
+			
 			
 		}
 		else if (action.equals("3")) {
