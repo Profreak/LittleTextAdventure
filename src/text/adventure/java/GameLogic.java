@@ -16,16 +16,16 @@ public class GameLogic {
 
 		System.out.println("Welcom to the Dungeon!");
 
-		// pausiert das Spiel um 1 Sekunde! Ist in double ... Es sind also auch 0.5 sekunden moeglich
+		// pausiert das Spiel um 1 Sekunde! Ist in double ... Es sind also auch
+		// 0.5 sekunden moeglich
 		// bsp: pause(0.5);
 		pause(1);
-		
+
 		Scanner sc = new Scanner(System.in);
 		boolean running = true;
 		while (running) {
 			System.out.print("Eingabe: ");
 			String action = sc.next();
-
 
 			System.out.println("#-----------------------------#");
 
@@ -91,14 +91,14 @@ public class GameLogic {
 	 *            seconds
 	 */
 	public void pause(double n) {
-		
+
 		// versuchs gar nicht erst es zu verstehen :)
 		try {
-			Thread.sleep((int)(n * 1000));
+			Thread.sleep((int) (n * 1000));
 		} catch (InterruptedException error) {
 			error.printStackTrace();
 		}
-		
+
 	}
 
 }

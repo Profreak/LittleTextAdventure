@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class Enemy {
 
-	public static final String[] ENEMIES = { "Mage", "Skeleton", "Demon", "Hellhound", "Barbarian", "Knight", "Zombie" };
+	public static final String[] ENEMIES = { "Mage", "Skeleton", "Demon",
+			"Hellhound", "Barbarian", "Knight", "Zombie" };
 	public final static int MIN_ENEMY_ATTACK = 5;
 	public final static int MAX_ENEMY_ATTACK = 25;
 	public final static int MAX_ENEMY_DEFENCE = 5;
@@ -22,16 +23,14 @@ public class Enemy {
 
 		String enemy = ENEMIES[rand.nextInt(ENEMIES.length)];
 
-		
+		enemyHealth = MIN_ENEMY_HEALTH
+				+ rand.nextInt(MAX_ENEMY_HEALTH - MIN_ENEMY_HEALTH);
+		enemyAttack = MIN_ENEMY_ATTACK
+				+ rand.nextInt(MAX_ENEMY_ATTACK - MIN_ENEMY_ATTACK);
+		enemyDefence = rand.nextInt(MAX_ENEMY_DEFENCE);
 
-		  enemyHealth = MIN_ENEMY_HEALTH + rand.nextInt(MAX_ENEMY_HEALTH - MIN_ENEMY_HEALTH);
-		  enemyAttack = MIN_ENEMY_ATTACK + rand.nextInt(MAX_ENEMY_ATTACK - MIN_ENEMY_ATTACK);
-		  enemyDefence = rand.nextInt(MAX_ENEMY_DEFENCE);
-
-		 
-		  
 	}
-	
+
 	/**
 	 * @return the enemyHealth
 	 */
@@ -40,7 +39,8 @@ public class Enemy {
 	}
 
 	/**
-	 * @param enemyHealth the enemyHealth to set
+	 * @param enemyHealth
+	 *            the enemyHealth to set
 	 */
 	public void setEnemyHealth(int enemyHealth) {
 		this.enemyHealth = enemyHealth;
@@ -54,7 +54,8 @@ public class Enemy {
 	}
 
 	/**
-	 * @param enemyAttack the enemyAttack to set
+	 * @param enemyAttack
+	 *            the enemyAttack to set
 	 */
 	public void setEnemyAttack(int enemyAttack) {
 		this.enemyAttack = enemyAttack;
@@ -68,7 +69,8 @@ public class Enemy {
 	}
 
 	/**
-	 * @param enemyDefence the enemyDefence to set
+	 * @param enemyDefence
+	 *            the enemyDefence to set
 	 */
 	public void setEnemyDefence(int enemyDefence) {
 		this.enemyDefence = enemyDefence;
@@ -79,8 +81,8 @@ public class Enemy {
 	 * 
 	 * @return true if enemy is alive
 	 */
-	public boolean isAlive(){
-		
+	public boolean isAlive() {
+
 		return (enemyHealth > 0);
 	}
 
