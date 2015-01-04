@@ -33,6 +33,48 @@ public class Enemy {
 	}
 	
 	/**
+	 * @return the enemyHealth
+	 */
+	public int getEnemyHealth() {
+		return enemyHealth;
+	}
+
+	/**
+	 * @param enemyHealth the enemyHealth to set
+	 */
+	public void setEnemyHealth(int enemyHealth) {
+		this.enemyHealth = enemyHealth;
+	}
+
+	/**
+	 * @return the enemyAttack
+	 */
+	public int getEnemyAttack() {
+		return enemyAttack;
+	}
+
+	/**
+	 * @param enemyAttack the enemyAttack to set
+	 */
+	public void setEnemyAttack(int enemyAttack) {
+		this.enemyAttack = enemyAttack;
+	}
+
+	/**
+	 * @return the enemyDefence
+	 */
+	public int getEnemyDefence() {
+		return enemyDefence;
+	}
+
+	/**
+	 * @param enemyDefence the enemyDefence to set
+	 */
+	public void setEnemyDefence(int enemyDefence) {
+		this.enemyDefence = enemyDefence;
+	}
+
+	/**
 	 * Returns true if enemy is alive
 	 * 
 	 * @return true if enemy is alive
