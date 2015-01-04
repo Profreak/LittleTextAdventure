@@ -36,21 +36,41 @@ public class GameLogic {
 			System.out.println("An" + "" + enemy + "appeared");
 			
 			
-			/** Bräuchte kurz deine Hilfe Ludi.
-			 * Kann nicht auf die gegenrisch erzeugte Lebensanzeige zugreifen.
-			 * Jedoch funktioniert die Sache bei der player Klasse wunderbar. 
-			 * Grüße Alex
-			 * 
-			 */
-			System.out.println (enemy.enemyHealth + " HP");
 			
+			 
+		
+			System.out.println (" What will you do?");
+			System.out.println ("\t1. Attack!");
+			System.out.println ("\t2. Defence");
+			System.out.println ("\t3. Run!");
+			System.out.println ("\t4. Heal");
+			
+			while (enemy.isAlive()) {
+			if (action.equals("1")) {
+				System.out.println ("You swing your mighty sword! ");
+				int damageDone = enemy.enemyHealth - player.playerAttack;
+				int damageTaken = player.playerHealth - enemy.enemyAttack;
+				System.out.println ("You deal " + player.playerAttack + " damage");
+				System.out.println (" You take " + enemy.enemyAttack);
+				
+				/**
+				 * Hi Ludi,
+				 * bräuchte deine Hilfe bzgl. der Übertragung von enemyHealth ^^
+				 */
+			}
+			}
 		}
 		else if (action.equals("2")) {
 			System.out.println ("You are searching this area for something");
+			if  ()
 			
 		}
 		else if (action.equals("3")) {
 			System.out.println ("You are leaving the Dungeon");
+			System.out.println ("#----------------------------#");
+			System.out.println ("Thank you for playing!");
+			break;
+			
 		}
 		else if (action.equals("4")) {
 			player.playerHealPots--;
