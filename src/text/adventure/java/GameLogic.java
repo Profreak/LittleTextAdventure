@@ -7,6 +7,8 @@ public class GameLogic {
 	public void GameLogic() {
 
 		Enemy enemy = new Enemy();
+		
+		// die Methode heiﬂt getEnemy()  nicht Enemy ...  demnach muss es heiﬂen: enemy.getEnemy();  fertig Sonst ist alles richtig!
 		enemy.Enemy();
 
 		/** was will er denn jetzt?!
