@@ -58,19 +58,11 @@ public class GameLogic {
 					if (action1.equals("1")) {
 						System.out.println("You swing your mighty sword! ");
 						
-						int damageDone = enemy.getEnemyHealth()
-								- player.playerAttack;
-						int damageTaken = player.playerHealth
-								- enemy.getEnemyAttack();
-						
-						player.playerHealth = damageTaken;
+						player.playerHealth -= enemy.getEnemyAttack();
+						enemyHealth = enemy.getEnemyHealth();
+						enemyHealth -= player.attack;
 						
 						
-						System.out.println("You deal " + player.playerAttack
-								+ " damage");
-						System.out.println(" You take "
-								+ enemy.getEnemyHealth());
-						System.out.println ("You have " + player.playerHealth + " HP");
 				
 					}
 				}
