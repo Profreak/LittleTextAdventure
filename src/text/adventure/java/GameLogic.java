@@ -9,11 +9,10 @@ public class GameLogic {
 		Enemy enemy = new Enemy();
 		
 		// die Methode heiﬂt getEnemy()  nicht Enemy ...  demnach muss es heiﬂen: enemy.getEnemy();  fertig Sonst ist alles richtig!
-		enemy.Enemy();
+		
+		enemy.getEnemy();
 
-		/** was will er denn jetzt?!
-		 * habe hier nichts ver‰ndert...
-		 */
+				 
 		
 		Player player = new Player();
 		player.player();
