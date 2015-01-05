@@ -15,6 +15,7 @@ public class Enemy {
 	private int enemyHealth;
 	private int enemyAttack;
 	private int enemyDefence;
+	private String enemy;
 
 	public Enemy() {
 
@@ -33,12 +34,9 @@ public class Enemy {
 	
 	// funktioniert das nicht bei Strings? ... klar geht das ... es geht mit allen Objekten
 	
+
 	public String getEnemy () {
-		
-		// du versucht enemy zurückzugeben .... aber das attribute enemy gibt es einfach nicht!
-		// im constructpr gibt es eine Variable die so heißt ... Sie ist aber nicht Klassenweit sichtbar!!!
-		// Du musst sie in die klasse schreiben. Also beispielweise unter enemy Health...
-		return getEnemy();
+	return enemy;	
 	}
 
 

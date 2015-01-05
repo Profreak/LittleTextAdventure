@@ -7,17 +7,13 @@ public class GameLogic {
 	public void GameLogic() {
 
 		Enemy enemy = new Enemy();
-		
-		// die Methode heißt getEnemy()  nicht Enemy ...  demnach muss es heißen: enemy.getEnemy();  fertig Sonst ist alles richtig!
-		
 		enemy.getEnemy();
-
-				 
-		
+		 
 		Player player = new Player();
 		player.player();
 
-		enemy.getClass();
+		
+		
 
 		System.out.println("Welcome to the Dungeon!");
 
@@ -44,12 +40,7 @@ public class GameLogic {
 				System.out.print("Eingabe: ");
 				String action = sc.next();
 				
-				/**
-				 * return funktioniert bei dieser Ausgabe leider nicht.
-				 * Möchte, dass der Gegner angegeben wird, wenn dieser 
-				 * gewählt wird. Gibt es bei Strings noch andere Regeln?
-				 * 
-				 */
+			
 			if (action.equals("1")) {
 				System.out.println("An" + "" + enemy + "appeared");
 
