@@ -42,7 +42,7 @@ public class GameLogic {
 				
 			
 			if (action.equals("1")) {
-				System.out.println("An" + "" + enemy + "appeared");
+				System.out.println("An" + "" + enemy.getEnemy() + "appeared");
 
 				
 				
@@ -56,12 +56,18 @@ public class GameLogic {
 
 				while (enemy.isAlive()) {
 					if (action1.equals("1")) {
-						System.out.println("You swing your mighty sword! ");
+						
 						
 						player.playerHealth -= enemy.getEnemyAttack();
 						enemy.setEnemyHealth(enemy.getEnemyHealth() - player.attack);
 						
+						System.out.println ("The enemy has " + enemy.getEnemyHealth() + " HP");
 						
+						if (enemy.getEnemyHealth () < 1) {
+							System.out.println ("You defeated the enemy");
+							
+							
+						}
 				
 					}
 				}
