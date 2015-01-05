@@ -59,8 +59,7 @@ public class GameLogic {
 						System.out.println("You swing your mighty sword! ");
 						
 						player.playerHealth -= enemy.getEnemyAttack();
-						enemyHealth = enemy.getEnemyHealth();
-						enemyHealth -= player.attack;
+						enemy.setEnemyHealth(enemy.getEnemyHealth() - player.attack);
 						
 						
 				
