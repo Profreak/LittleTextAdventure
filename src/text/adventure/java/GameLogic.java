@@ -1,6 +1,7 @@
 package text.adventure.java;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class GameLogic {
 
@@ -13,7 +14,7 @@ public class GameLogic {
 		player.player();
 
 		
-		
+		Random rand = new Random ();
 
 		System.out.println("Welcome to the Dungeon!");
 
@@ -42,7 +43,7 @@ public class GameLogic {
 				
 			
 			if (action.equals("1")) {
-				System.out.println("An" + "" + enemy.getEnemy() + "appeared");
+				System.out.println("An" + "" + enemy.enemy + "appeared");
 
 				
 				
@@ -53,20 +54,31 @@ public class GameLogic {
 				System.out.println("\t4. Heal");
 				
 				String action1 = sc.next ();
-
+				
+				Game:
 				while (enemy.isAlive()) {
 					if (action1.equals("1")) {
 						
+						int enemyHealth = enemy.enemyHealth;
 						
-						player.playerHealth -= enemy.getEnemyAttack();
-						enemy.setEnemyHealth(enemy.getEnemyHealth() - player.attack);
+						int damageDone = rand.nextInt (player.playerAttack);
+						enemy.setEnemyHealth(enemy.getEnemyHealth() - damageDone);
 						
-						System.out.println ("The enemy has " + enemy.getEnemyHealth() + " HP");
+						int damageTaken =enemy.getEnemyAttack();
+						player.playerHealth -= damageTaken;
 						
-						if (enemy.getEnemyHealth () < 1) {
+						System.out.println ("You have " + player.playerHealth +" HP");
+						System.out.println ("You deal " + damageDone + " damage");
+						System.out.println ("You take " + damageTaken + " damage");
+						System.out.println ("You have " + player.playerHealth + " left");
+						System.out.println ("The enemy has " + enemyHealth + " left");
+						
+						if (enemyHealth < 1) {
 							System.out.println ("You defeated the enemy");
-							
-							
+						}
+				
+						else if (enemyHealth> 1) {
+							continue Game;
 						}
 				
 					}

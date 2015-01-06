@@ -12,10 +12,10 @@ public class Enemy {
 	public final static int MAX_ENEMY_DEFENCE = 5;
 	public final static int MAX_ENEMY_HEALTH = 60;
 	public final static int MIN_ENEMY_HEALTH = 10;
-	private int enemyHealth;
+	public int enemyHealth;
 	private int enemyAttack;
 	private int enemyDefence;
-	private String enemy;
+	public String enemy;
 
 	public Enemy() {
 
