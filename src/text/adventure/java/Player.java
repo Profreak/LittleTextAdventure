@@ -6,7 +6,7 @@ public class Player {
 
 	int playerHealth = 100;
 	int playerAttack = 50;
-	int playeDefence = 20;
+	int playerDefemce = 50;
 	int playerHealPots = 3;
 	int healPots = 30;
 	int dropRate = 25; // Prozent

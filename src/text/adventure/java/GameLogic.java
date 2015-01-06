@@ -12,7 +12,7 @@ public class GameLogic {
 		 
 		Player player = new Player();
 		player.player();
-
+		int enemyHealth = enemy.enemyHealth;
 		
 		Random rand = new Random ();
 
@@ -59,7 +59,7 @@ public class GameLogic {
 				while (enemy.isAlive()) {
 					if (action1.equals("1")) {
 						
-						int enemyHealth = enemy.enemyHealth;
+						
 						
 						int damageDone = rand.nextInt (player.playerAttack);
 						enemy.setEnemyHealth(enemy.getEnemyHealth() - damageDone);
@@ -82,7 +82,28 @@ public class GameLogic {
 						}
 				
 					}
+					
+					if (action1.equals("2")) {
+						int defence = rand.nextInt(player.playerDefemce);
+						int damageTaken =enemy.getEnemyAttack() - defence; 
+						player.playerHealth -= damageTaken;
+						System.out.println ("You manage to rise you shield");
+						System.out.println ("You take " + damageTaken + " damage");
+						
+						if (player.playerHealth > 1) {
+							System.out.println ("The fight goes on");
+							System.out.println ("You take " + damageTaken + " damage");
+							System.out.println ("You have " + player.playerHealth +" HP");
+							System.out.println ("You have " + player.playerHealth + " HP left");
+							System.out.println ("The enemy has " + enemyHealth + " HP left");
+							continue Game;
+						}
+					}
+					
+					
 				}
+				
+					
 			} else if (action.equals("2")) {
 				System.out.println("You are searching this area for something");
 
@@ -94,8 +115,10 @@ public class GameLogic {
 
 			} else if (action.equals("4")) {
 				player.playerHealPots--;
-				player.playerHealth = player.playerHealth + player.healPots;
+				player.playerHealth += player.healPots;
 				System.out.println("You drink a heal pot");
+				System.out.println ("You have now " + player.playerHealth + " HP");
+				System.out.println ("You have still " + player.playerHealPots + " Healpots left");
 			}
 
 			else {
