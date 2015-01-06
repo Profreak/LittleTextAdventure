@@ -32,7 +32,7 @@ public class Enemy {
 
 	}
 	
-	// funktioniert das nicht bei Strings? ... klar geht das ... es geht mit allen Objekten
+	
 	
 
 	public String getEnemy () {
