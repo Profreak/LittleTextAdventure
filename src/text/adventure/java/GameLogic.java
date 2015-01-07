@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class GameLogic {
+	
+	
 
 	public void GameLogic() {
 
@@ -84,9 +86,13 @@ public class GameLogic {
 					}
 					
 					if (action1.equals("2")) {
-						int defence = rand.nextInt(player.playerDefemce);
+						
+						int defence =rand.nextInt(player.playerDefence);
 						int damageTaken =enemy.getEnemyAttack() - defence; 
 						player.playerHealth -= damageTaken;
+						if (damageTaken<1){
+							damageTaken = 0;
+						}
 						System.out.println ("You manage to rise you shield");
 						System.out.println ("You take " + damageTaken + " damage");
 						
