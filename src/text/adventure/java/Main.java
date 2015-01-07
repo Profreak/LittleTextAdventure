@@ -3,7 +3,7 @@
  */
 package text.adventure.java;
 
-import java.util.Random;
+
 
 /**
  * @author Raptor
