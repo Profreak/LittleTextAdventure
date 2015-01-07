@@ -96,10 +96,10 @@ public class GameLogic {
 							System.out.println ("You have " + player.playerHealth +" HP");
 							System.out.println ("You have " + player.playerHealth + " HP left");
 							System.out.println ("The enemy has " + enemyHealth + " HP left");
-							continue Game;
+							
 						}
 					}
-					
+				
 					
 				}
 				
