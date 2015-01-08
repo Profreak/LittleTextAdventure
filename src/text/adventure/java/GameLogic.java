@@ -41,13 +41,13 @@ public class GameLogic {
 		
 		// yolo laden^^
 		System.out.print(".");
-		this.pause(0.5);
+		this.pause(0.25);
 		System.out.print(".");
-		this.pause(0.5);
+		this.pause(0.25);
 		System.out.print(".");
-		this.pause(0.5);
+		this.pause(0.25);
 		System.out.print("loading\n");
-		this.pause(0.5);
+		this.pause(0.25);
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class GameLogic {
 	 * Action leave the dungeon
 	 */
 	public void leave() {
-		System.out.println("");
+		System.out.println("You are leaving the Dungeon");
 		// diest ist der Befehl zum beenden des Programmes
 		System.exit(0);
 	}
