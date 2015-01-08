@@ -1,50 +1,61 @@
 package text.adventure.java;
 
 import java.util.Random;
-import java.util.Scanner;
 
+/**
+ * 
+ * This class represents an Enemy
+ * 
+ * @author A
+ *
+ */
 public class Enemy {
 
-	public static final String[] ENEMIES = { "Mage", "Skeleton", "Demon",
-			"Hellhound", "Barbarian", "Knight", "Zombie" };
+	// possible enemy classes
+	public static final String[] ENEMIES = { "Mage", "Skeleton", "Demon", "Hellhound", "Barbarian", "Knight", "Zombie" };
+	
+	// constante Rahmenbediengungen deiner Enemys
 	public final static int MIN_ENEMY_ATTACK = 5;
 	public final static int MAX_ENEMY_ATTACK = 25;
 	public final static int MAX_ENEMY_DEFENCE = 5;
 	public final static int MAX_ENEMY_HEALTH = 60;
 	public final static int MIN_ENEMY_HEALTH = 10;
-	public int enemyHealth;
+	
+	// Klassen variabeln
+	private int enemyHealth;
 	private int enemyAttack;
 	private int enemyDefence;
-	public String enemy;
+	private String enemy;
 
+	/**
+	 * create an new enemy
+	 */
 	public Enemy() {
 
-		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
 
-		String enemy = ENEMIES[rand.nextInt(ENEMIES.length)];
+		this.enemy = ENEMIES[rand.nextInt(ENEMIES.length)];
 
-		enemyHealth = MIN_ENEMY_HEALTH
-				+ rand.nextInt(MAX_ENEMY_HEALTH - MIN_ENEMY_HEALTH);
-		enemyAttack = MIN_ENEMY_ATTACK
-				+ rand.nextInt(MAX_ENEMY_ATTACK - MIN_ENEMY_ATTACK);
-		enemyDefence = rand.nextInt(MAX_ENEMY_DEFENCE);
+		this.enemyHealth = MIN_ENEMY_HEALTH + rand.nextInt(MAX_ENEMY_HEALTH - MIN_ENEMY_HEALTH);
+		this.enemyAttack = MIN_ENEMY_ATTACK + rand.nextInt(MAX_ENEMY_ATTACK - MIN_ENEMY_ATTACK);
+		this.enemyDefence = rand.nextInt(MAX_ENEMY_DEFENCE);
 
 	}
-	
-	
-	
 
-	public String getEnemy () {
-	return enemy;	
+	/**
+	 * returns the Enemy Class
+	 * 
+	 * @return
+	 */
+	public String getEnemyClass() {
+		return this.enemy;
 	}
-
 
 	/**
 	 * @return the enemyHealth
 	 */
 	public int getEnemyHealth() {
-		return enemyHealth;
+		return this.enemyHealth;
 	}
 
 	/**
@@ -91,15 +102,7 @@ public class Enemy {
 	 * @return true if enemy is alive
 	 */
 	public boolean isAlive() {
-
 		return (enemyHealth > 0);
 	}
 
-
-
-
-	
-		
-	}
-
-
+}

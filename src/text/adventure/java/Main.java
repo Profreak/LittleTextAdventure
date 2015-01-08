@@ -1,25 +1,23 @@
-/**
- * 
- */
 package text.adventure.java;
 
-
-
 /**
- * @author Raptor
+ * 
+ * 
+ * @author Alexander Angeloussis
  *
  */
 public class Main {
 
 	/**
+	 * programmeinsprungpunkt
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		// locale variable
 		GameLogic game = new GameLogic();
-		game.GameLogic();
-
+		game.runGame();
 	}
 
 }

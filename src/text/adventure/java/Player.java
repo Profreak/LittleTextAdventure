@@ -1,23 +1,32 @@
 package text.adventure.java;
 
-import java.util.Random;
-
+/**
+ * 
+ * This class represents the Player
+ * 
+ * @author Alexander Angeloussis
+ *
+ */
 public class Player {
 
-	int playerHealth = 100;
-	int playerAttack = 50;
-	int playerDefence = 50;
-	int playerHealPots = 3;
-	int healPots = 30;
-	int dropRate = 25; // Prozent
-	int attack;
-	int defence;
-	
+	public int playerHealth = 100;
+	public int playerAttack = 50;
+	public int playerDefence = 50;
+	public int playerHealPots = 3;
+	public int healPots = 30;
+	public int dropRate = 25;
+
+	public int attack;
+	public int defence;
+
 	public void player() {
 
-	
-		
+		playerHealth = 100;
+		playerAttack = 50;
+		playerDefence = 50;
+		playerHealPots = 3;
+		healPots = 30;
+
 	}
 
-	
 }
