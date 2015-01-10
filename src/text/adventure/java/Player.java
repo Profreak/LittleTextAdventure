@@ -9,12 +9,12 @@ package text.adventure.java;
  */
 public class Player {
 
-	public int playerHealth = 100;
-	public int playerAttack = 50;
-	public int playerDefence = 50;
-	public int playerHealPots = 3;
-	public int healPots = 30;
-	public int dropRate = 25;
+	public int playerHealth;
+	public int playerAttack;
+	public int playerDefence;
+	public int playerHealPots;
+	public int healPots ;
+	public int dropRate;
 
 	public int attack;
 	public int defence;

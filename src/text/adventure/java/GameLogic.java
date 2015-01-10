@@ -17,6 +17,18 @@ public class GameLogic {
 	private Enemy enemy;
 	private boolean running;
 	private Scanner sc;
+	
+	int playerHealth = player.playerHealth;
+	int playerAttack = player.playerAttack;
+	int playerHealPots = player.playerHealPots;
+	int healPots = player.healPots;
+	int playerdefence = player.playerDefence;
+	
+	int enemyAttack = enemy.enemyAttack ();
+	int enemyHealth = enemy.enemyHealth ();
+	int enemyDefence = enemy.enemyDefence();
+	String enemyName = enemy.enemy;
+	
 
 	/**
 	 * 
@@ -29,6 +41,7 @@ public class GameLogic {
 		this.enemy = new Enemy();
 		this.running = true;
 		this.sc = new Scanner(System.in);
+		
 	}
 
 	/**
@@ -123,14 +136,25 @@ public class GameLogic {
 	 */
 	public void goDeeper() {
 		System.out.println("You go deeper into the Dungeon");
+		System.out.println ("An " + enemyName + "appeared");
 		// TODO
 	}
+		
+		
+	
 
 	/**
 	 * action heal
 	 */
 	public void heal() {
-		System.out.println("");
+		System.out.println("You take a heal pot");
+		playerHealth = playerHealth + healPots;
+		playerHealPots--;
+		if (playerHealPots < 1)
+		{
+			System.out.println ("You don´t have any Healpots left");
+			playerHealth = playerHealth + 0; 
+		}
 		// TODO
 	}
 
@@ -147,8 +171,13 @@ public class GameLogic {
 	 */
 	public void leave() {
 		System.out.println("You are leaving the Dungeon");
+	
+		System.out.println ("#----------------------------------#");
+		System.out.println ("Thank you for playing!");
 		// diest ist der Befehl zum beenden des Programmes
 		System.exit(0);
+		
+		
 	}
 
 	/**
