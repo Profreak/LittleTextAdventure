@@ -18,16 +18,16 @@ public class GameLogic {
 	private boolean running;
 	private Scanner sc;
 	
-	int playerHealth = player.playerHealth;
-	int playerAttack = player.playerAttack;
-	int playerHealPots = player.playerHealPots;
-	int healPots = player.healPots;
-	int playerdefence = player.playerDefence;
+	int playerHealth;
+	int playerAttack;
+	int playerHealPots;
+	int healPots;
+	int playerdefence;
 	
-	int enemyAttack = enemy.enemyAttack ();
-	int enemyHealth = enemy.enemyHealth ();
-	int enemyDefence = enemy.enemyDefence();
-	String enemyName = enemy.enemy;
+	int enemyAttack;
+	int enemyHealth;
+	int enemyDefence;
+	String enemyName;
 	
 
 	/**
@@ -41,7 +41,15 @@ public class GameLogic {
 		this.enemy = new Enemy();
 		this.running = true;
 		this.sc = new Scanner(System.in);
-		
+		this.playerHealth =  player.playerHealth;
+		this.playerAttack = player.playerAttack;
+		this.playerHealPots = player.playerAttack;
+		this.healPots =  player.healPots;
+		this.playerdefence = player.healPots;
+		this.enemyAttack = enemy.enemyAttack ();
+		this.enemyHealth = enemy.enemyHealth ();
+		this.enemyDefence  = enemy.enemyDefence();
+		this.enemyName = enemy.enemy;
 	}
 
 	/**
@@ -136,7 +144,7 @@ public class GameLogic {
 	 */
 	public void goDeeper() {
 		System.out.println("You go deeper into the Dungeon");
-		System.out.println ("An " + enemyName + "appeared");
+		System.out.println ("An " + enemyName + " appeared");
 		// TODO
 	}
 		
