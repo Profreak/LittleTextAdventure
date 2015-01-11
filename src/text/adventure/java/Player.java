@@ -19,7 +19,7 @@ public class Player {
 	public int attack;
 	public int defence;
 
-	public void player() {
+	public Player() {
 
 		playerHealth = 100;
 		playerAttack = 50;

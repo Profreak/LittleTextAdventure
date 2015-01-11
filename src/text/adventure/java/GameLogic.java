@@ -189,14 +189,25 @@ public class GameLogic {
 	//Probleme mit playerHealth => kommt immer 0 raus. Egal ob hier oder oben
 	public void heal() {
 		System.out.println("You take a heal pot");
-		playerHealth = playerHealth + healPots;
-		System.out.println ("You have now " + playerHealPots + " left" );
-		playerHealPots--;
-		if (playerHealPots < 1)
+		
+		if (playerHealPots <= 0)
 		{
 			System.out.println ("You don´t have any Healpots left");
 			playerHealth = playerHealth + 0; 
+			
+			if (playerHealPots < 0) {
+				playerHealPots = 0;
+			}
 		}
+		
+		else  {
+			playerHealth = playerHealth + healPots;
+			playerHealPots--;
+		}
+		System.out.println ("You have now " + playerHealPots +  " pots left" );
+		System.out.println ("You have " + playerHealth + " HP");
+		
+		
 		// TODO
 	}
 
