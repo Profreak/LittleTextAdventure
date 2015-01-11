@@ -1,5 +1,6 @@
 package text.adventure.java;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -16,6 +17,7 @@ public class GameLogic {
 	private Player player;
 	private Enemy enemy;
 	private boolean running;
+	private Random rand;
 	private Scanner sc;
 	
 	int playerHealth;
@@ -23,6 +25,7 @@ public class GameLogic {
 	int playerHealPots;
 	int healPots;
 	int playerdefence;
+	int randomPlayerAttack;
 	
 	int enemyAttack;
 	int enemyHealth;
@@ -41,15 +44,21 @@ public class GameLogic {
 		this.enemy = new Enemy();
 		this.running = true;
 		this.sc = new Scanner(System.in);
+		this.rand = new Random ();
+		
 		this.playerHealth =  player.playerHealth;
 		this.playerAttack = player.playerAttack;
-		this.playerHealPots = player.playerAttack;
+		this.playerHealPots = player.playerHealPots;
 		this.healPots =  player.healPots;
-		this.playerdefence = player.healPots;
+		this.playerdefence = player.playerDefence;
+		
+		
+		
 		this.enemyAttack = enemy.enemyAttack ();
 		this.enemyHealth = enemy.enemyHealth ();
 		this.enemyDefence  = enemy.enemyDefence();
 		this.enemyName = enemy.enemy;
+		
 	}
 
 	/**
@@ -83,7 +92,7 @@ public class GameLogic {
 
 			// show possibilities
 			System.out.println("What do you want to do?");
-			System.out.println("\t1. Go deeper to the Dungeon!");
+			System.out.println("\t1. Go deeper into the Dungeon!");
 			System.out.println("\t2. Take a Healpot");
 			System.out.println("\t3. Search the area");
 			System.out.println("\t4. leave the Dungeon" + "\n");
@@ -145,18 +154,43 @@ public class GameLogic {
 	public void goDeeper() {
 		System.out.println("You go deeper into the Dungeon");
 		System.out.println ("An " + enemyName + " appeared");
+		
+		
+		
+		
+		
+		
 		// TODO
 	}
 		
 		
+	public void attackWennBefehl (String a) {
+		
+		int cmd1 = Integer.parseInt (a);
+		
+		switch (cmd1) {
+		case 1:
+		this.attackBefehl ();
+		break;
+		}
+	}
 	
+	public void attackBefehl () {
+		System.out.println ("You swing your sword");
+		this.randomPlayerAttack = rand.nextInt (playerAttack);
+		enemyHealth -= this.randomPlayerAttack;
+		System.out.println (enemyHealth);
+	}
 
 	/**
 	 * action heal
 	 */
+	
+	//Probleme mit playerHealth => kommt immer 0 raus. Egal ob hier oder oben
 	public void heal() {
 		System.out.println("You take a heal pot");
 		playerHealth = playerHealth + healPots;
+		System.out.println ("You have now " + playerHealPots + " left" );
 		playerHealPots--;
 		if (playerHealPots < 1)
 		{
