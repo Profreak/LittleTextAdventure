@@ -20,6 +20,8 @@ public class GameLogic {
 	private Random rand;
 	private Scanner sc;
 	
+	
+	
 	int playerHealth;
 	int playerAttack;
 	int playerHealPots;
@@ -45,6 +47,7 @@ public class GameLogic {
 		this.running = true;
 		this.sc = new Scanner(System.in);
 		this.rand = new Random ();
+		
 		
 		this.playerHealth =  player.playerHealth;
 		this.playerAttack = player.playerAttack;
@@ -154,32 +157,54 @@ public class GameLogic {
 	public void goDeeper() {
 		System.out.println("You go deeper into the Dungeon");
 		System.out.println ("An " + enemyName + " appeared");
-		
-		
-		
-		
-		
-		
-		// TODO
+		System.out.println ("What do you want to do now?");
+		this.enemyDecision();
 	}
 		
+	public void enemyDecision () {
 		
-	public void attackWennBefehl (String a) {
+		System.out.println ("\t1.Attack");
+		System.out.println ("\t2.Defence");
+		System.out.println ("\t3.Heal");
+		System.out.println ("\t4.Run");
+		this.secondCommand ();
 		
-		int cmd1 = Integer.parseInt (a);
 		
-		switch (cmd1) {
-		case 1:
-		this.attackBefehl ();
-		break;
-		}
+	}
+	
+	public void secondCommand () {
+		String stringChoice = "please enter your choice";
+		System.out.println (stringChoice);
+		this.attackBefehl();
+		
 	}
 	
 	public void attackBefehl () {
-		System.out.println ("You swing your sword");
-		this.randomPlayerAttack = rand.nextInt (playerAttack);
-		enemyHealth -= this.randomPlayerAttack;
-		System.out.println (enemyHealth);
+		
+		String cmd2 = this.sc.next();
+		
+		
+		if (cmd2.equals ("1")) {
+			this.attack();	
+		}
+		
+		else if (cmd2.equals ("2")) {
+			
+		}
+		}
+	
+		private void attack () {
+			
+		}
+	
+	
+	
+	
+	
+
+	private void Switch(int a) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	/**
