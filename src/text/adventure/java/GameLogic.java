@@ -90,7 +90,8 @@ public class GameLogic {
 
 		// hi
 		this.welcome();
-
+		
+		GAME:
 		while (running) {
 
 			// show possibilities
@@ -157,6 +158,7 @@ public class GameLogic {
 	public void goDeeper() {
 		System.out.println("You go deeper into the Dungeon");
 		System.out.println ("An " + enemyName + " appeared");
+		System.out.println ("HP " + this.enemyHealth);
 		System.out.println ("What do you want to do now?");
 		this.enemyDecision();
 	}
@@ -191,14 +193,43 @@ public class GameLogic {
 		else if (cmd2.equals ("2")) {
 			
 		}
-		}
-	
-		private void attack () {
+		
+		else if (cmd2.equals ("3")){
 			
 		}
+		else if (cmd2.equals("4")){
+			
+		}
+		else {
+			System.out.println ("error");
+		}
+	}
+	
+		private void attack () {
+		while (this.enemyHealth >1){
+		System.out.println ("You swing your sword");
+		int damageDone = this.playerAttack1();
+		System.out.println ("You deal " + damageDone + " damage");
+		this.enemyHealth = this.enemyHealth - damageDone;
+		System.out.println("The enemy has " + this.enemyHealth + " HP left");
+		if (this.enemyHealth < 1) {
+			this.enemyHealth = 0;
+		}
+		if (this.enemyHealth < 1) {
+			System.out.println ("You defeated the enemy");
+			}
+		else {
+			
+		}
+		}
+		
+		}
 	
 	
-	
+		private int playerAttack1 () {
+			playerAttack = rand.nextInt(this.playerAttack);
+			return playerAttack;
+		}
 	
 	
 

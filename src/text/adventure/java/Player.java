@@ -22,7 +22,7 @@ public class Player {
 	public Player() {
 
 		playerHealth = 100;
-		playerAttack = 50;
+		playerAttack = 30;
 		playerDefence = 50;
 		playerHealPots = 3;
 		healPots = 30;
