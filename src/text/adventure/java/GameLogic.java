@@ -206,24 +206,32 @@ public class GameLogic {
 	}
 	
 		private void attack () {
-		while (this.enemyHealth >1){
+		
 		System.out.println ("You swing your sword");
+		
 		int damageDone = this.playerAttack1();
 		System.out.println ("You deal " + damageDone + " damage");
+		if (enemyHealth < 1) {
+			enemyHealth = 0;
+		}
 		this.enemyHealth = this.enemyHealth - damageDone;
 		System.out.println("The enemy has " + this.enemyHealth + " HP left");
-		if (this.enemyHealth < 1) {
-			this.enemyHealth = 0;
-		}
-		if (this.enemyHealth < 1) {
+		
+		if (enemyHealth < 1) {
 			System.out.println ("You defeated the enemy");
-			}
-		else {
-			
 		}
+		else {
+			System.out.println ("The enemy is still standing");
+			this.attackBefehl();
 		}
 		
+		
 		}
+		
+		
+		
+	
+		
 	
 	
 		private int playerAttack1 () {
