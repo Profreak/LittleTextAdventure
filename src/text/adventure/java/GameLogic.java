@@ -91,7 +91,7 @@ public class GameLogic {
 		// hi
 		this.welcome();
 		
-		GAME:
+		//GAME:
 		while (running) {
 
 			// show possibilities
@@ -235,7 +235,31 @@ public class GameLogic {
 	
 	
 		private int playerAttack1 () {
+			
+			// klar geht das nicht player attack muss hier immer kleiner werden
+			// da du hier der eigentlich unveränderbaren player attack einen neuen Wert zuweist.
+			// also nehmen wir mal an du hast den Wert von Player attack auf  10 gemacht
+			// dann passiert folgendes: 
+			//playerAttack = rand.nextint(10);
+			// die Rand funktion sucht nun eine zahl zwischen 0 und 10
+			// beispielsweise 5
+			// dann stände nach dieser Zeile
+			/// playerAttack = 5
+			// nunj da du playerAttack auffrufst und playerAttack die KLassenvariabel zum Player Attack ist
+			// ist ab diesem moment der playerAttack = 5
+			// so nun rufst du diese Zeile nochmal auf.
+			// die rand funktion sucht nun eine zahl zwischen 1 und 5
+			// beispielsweise 3
+			// also wäre nach dem zweiten auffruf der Funktion playerAttack 3
+			// daduruch vermindert sich der playerAttack immer weiter
 			playerAttack = rand.nextInt(this.playerAttack);
+			// Lösung
+			// der Trick ist eine locale Variabel zu erstellen.
+			
+			// int currentPlayerAttack = rand.nextInt(this.playerAttack);
+			// return currentPlayerAttack;
+			
+			// dadurch wird die eigentliche PlayerAttack nicht verändert.
 			return playerAttack;
 		}
 	
