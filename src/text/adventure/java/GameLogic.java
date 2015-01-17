@@ -211,7 +211,7 @@ public class GameLogic {
 		
 		int damageDone = this.playerAttack1();
 		System.out.println ("You deal " + damageDone + " damage");
-		if (enemyHealth < 1) {
+		if (enemyHealth < 0) {
 			enemyHealth = 0;
 		}
 		this.enemyHealth = this.enemyHealth - damageDone;
@@ -241,10 +241,7 @@ public class GameLogic {
 	
 	
 
-	private void Switch(int a) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	/**
 	 * action heal
